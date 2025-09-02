@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url(assets/Images/bg.jpg);
+    background-position: center center;
+    background-size: max(1400px, 100vh);
+    background-repeat: no-repeat;
+    height: 120vh;
+    position: relative;
+}
+
+.main .box {
+    height: 120vh;
+    width: 100%;
+    opacity: 0.69;
+    background-color: black;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+nav {
+    width: 80%;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 62px;
+}
+
+nav img {
+    color: red;
+    width: 150px;
+    position: relative;
+    object-fit: contain;
+    margin-left: 20px;
+    margin-top: 30px;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-family: 'Martel Sans', sans-serif;
+    height: calc(100% - 62px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    padding: 0 30px;
+}
+
+.hero> :nth-child(1) {
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+}
+
+.hero> :nth-child(2) {
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: center;
+}
+
+.curve {
+    position: relative;
+    height: 20px;
+    background: #141414;
+    overflow: hidden;
+}
+
+.curve::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to right, red, rgb(248, 142, 159));
+
+    border-radius: 50% 50% 0 0;
+    transform: scale(1, 0.5);
+}
+
+
+.btn {
+    padding: 3px 8px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+
+}
+
+.btn-red {
+    background-color: rgb(229, 9, 20);
+    color: white;
+    font-size: 20px;
+    padding: 3px 24px;
+    border-radius: 5px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.main input {
+    padding: 3px 24px;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(23, 23, 23, 0.5);
+}
+
+.btn-red-sm {
+    background-color: rgb(229, 9, 20);
+    color: white;
+    font-size: 20px;
+    padding: 3px 24px;
+    border-radius: 5px;
+}
+
+.top-10 {
+    padding: 30px 50px;
+    color: white;
+}
+
+.top-10 h2 {
+    font-size: 28.8px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.movies-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.movies-container::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-card {
+    position: relative;
+    width: 180px;
+    height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.1);
+}
+
+.movie-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.movie-rank {
+    position: absolute;
+    bottom: 3px;
+    left: 10px;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 6px black;
+}
+
+.reasons {
+  padding: 60px 10%;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
+.reasons h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.reasons-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.reason-box {
+  background: linear-gradient(145deg, #1f1f1f, #0d0d0d);
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 0, 100, 0.4);
+}
+
+.reason-box svg {
+  margin-bottom: 20px;
+}
+
+.reason-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.reason-box p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.faq {
+  background-color: black;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.faq details {
+  max-width: 800px;
+  margin: 10px auto;
+  background: #303030;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq summary::after {
+  content: "+";
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq p {
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.footer {
+  background-color: black;
+  color: #757575;
+  padding: 50px 20px;
+  text-align: left;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.footer-links li a {
+  color: #757575;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
+.footer-lang select {
+  background: black;
+  color: white;
+  border: 1px solid #757575;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
